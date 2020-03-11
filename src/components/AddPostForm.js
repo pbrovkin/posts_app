@@ -16,7 +16,7 @@ const AddPostForm = (props) => {
     }
 
     return (
-        <div>
+        <div className="container">
             <h3>add a post</h3>
             <form onSubmit={handleSubmit}>
                 <div>

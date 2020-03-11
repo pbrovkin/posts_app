@@ -18,7 +18,7 @@ const PostList = ({ posts, setPosts, setNotification }) => {
     }
     return (
 
-        <div>
+        <div className="container">
             <h3>Posts</h3>
             <ul>
                 {posts.map(post =>

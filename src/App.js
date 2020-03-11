@@ -5,6 +5,7 @@ import Post from './components/Post'
 import AddPostForm from './components/AddPostForm'
 import Menu from './components/Menu'
 import Notification from './components/Notification'
+import Header from "./components/Header"
 
 
 const App = () => {
@@ -42,17 +43,18 @@ const App = () => {
 
     const postById = (id) => posts.find(post => post.id === id)
 
-    
+
 
     return (
         <>
             <Router>
                 <div>
+                    <Header />
                     <Menu />
                     <Notification message={notification} />
                     <Switch>
-                        <Route path="/" exact render={() => <PostList posts={posts} setPosts={setPosts} setNotification={setNotification}/>} />
-                        <Route exact path="/posts/:id" render={({ history, match }) => <Post post={postById(match.params.id)} setPosts={setPosts} setNotification={setNotification} posts={posts} history={history}/>} />
+                        <Route path="/" exact render={() => <PostList posts={posts} setPosts={setPosts} setNotification={setNotification} />} />
+                        <Route exact path="/posts/:id" render={({ history, match }) => <Post post={postById(match.params.id)} setPosts={setPosts} setNotification={setNotification} posts={posts} history={history} />} />
                         <Route path="/addPost" render={(props) => <AddPostForm history={props.history} addPost={addPost} />} />
                     </Switch>
                 </div>
