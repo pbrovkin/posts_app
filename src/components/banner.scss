@@ -1,0 +1,92 @@
+@import "../scss/variable";
+
+.banner {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-size: $banner-title;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: $color-white;
+
+    &--subtitle {
+      font-size: 24px;
+      color: #ffffff;
+    }
+  }
+
+  &__title--bold {
+    font-size: $banner-title;
+    color: $color-brand;
+    font-weight: 900 !important;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  &__title--bold-sec {
+    font-size: $banner-title;
+    color: $color-secoundary;
+    font-weight: 900 !important;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: $regular-text;
+    margin: 20px 0;
+  }
+
+  &__btn {
+    margin: 20px 0 70px 0;
+  }
+}
+.result {
+  color: $color-white;
+  padding-left: 20px;
+  font-weight: 900;
+}
+
+.button {
+  padding: 14px 20px;
+  margin: 20px 0;
+  background: $color-brand;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: $color-white;
+  text-align: center;
+  display: inline-block;
+
+  transform: scale(1);
+  transition: transform 0.35s ease-in-out;
+
+  &--secoundary {
+    background: $color-white;
+    color: $color-brand;
+    border: 1px solid $color-brand;
+  }
+
+  &--selected {
+    background: $color-brand;
+    color: $color-white;
+  }
+
+  svg {
+    width: 30px;
+  }
+}
+
+.button:hover {
+  transform: scale(1.03);
+}
+
+.button-active {
+  background: $color-brand;
+  color: $color-white;
+}
