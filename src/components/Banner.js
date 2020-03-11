@@ -8,14 +8,12 @@ import "./banner.scss";
 const Banner = () => {
   return (
     <div className="banner">
-      <h1 className="banner__title">{"Write you blog "}</h1>
+      <h1 className="banner__title">{"Write Your Thoughts "}</h1>
       <div className="total-country">
         <h2 className="banner__title--subtitle">
-          {"Here is a list of most common array methods"}
+          {"A smart place to express yourself"}
         </h2>
       </div>
-      {/* <Menu /> */}
-      {/* <Weather /> */}
     </div>
   );
 };

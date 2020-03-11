@@ -108,13 +108,238 @@ p {
 .footer-section {
   background: $color-black;
 }
+// posts SCSS
 
-.container {
-  max-width: rem(1350px);
-  width: 80%;
-  margin: 0 auto;
-  height: 100%;
+.posts_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
 }
-.post-card {
-  background-color: red;
+
+.post {
+  padding: 30px;
+  margin: 26px;
+  width: 46%;
+  background: $color-white;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.07);
+  border-radius: 14px;
+  padding: 30px;
+  align-items: left;
+  font-size: regular-text;
+  transform: scale(1);
+  transition: transform 0.35s ease-in-out;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  img {
+    width: 80%;
+  }
+}
+
+.post-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: left;
+  font-size: regular-text;
+  padding: 20px 30px;
+}
+
+.post:hover {
+  transform: scale(1.015);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.post-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: left;
+  padding: 30px 30px;
+  margin: 10px;
+  width: 100%;
+  background: $color-white;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.07);
+  border-radius: 14px;
+  padding: 30px;
+  font-size: regular-text;
+}
+
+.singlepost {
+  padding: 20px;
+  margin: 20px;
+  width: 100%;
+  background: $color-white;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.07);
+  border-radius: 14px;
+  padding: 30px;
+  align-items: left;
+  font-size: regular-text;
+  transform: scale(1);
+  transition: transform 0.35s ease-in-out;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.singlepost-content {
+  margin: 26px;
+  padding: 30px;
+}
+
+// button
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  padding: 14px 20px;
+  margin: 20px 0;
+  background: $color-brand;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: $color-white;
+  text-align: center;
+  display: inline-block;
+  transform: scale(1);
+  transition: transform 0.35s ease-in-out;
+  font-size: $regular-text;
+  min-width: 150px;
+}
+.button-white {
+  padding: 14px 20px;
+  margin: 20px 30px;
+  background: $color-white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: $color-brand;
+  text-align: center;
+  display: inline-block;
+  transform: scale(1);
+  transition: transform 0.35s ease-in-out;
+  border: solid 1px $color-brand;
+  max-width: 150px;
+  font-size: $regular-text;
+}
+
+.button:hover {
+  transform: scale(1.03);
+}
+
+.button-active {
+  background: $color-brand;
+  color: $color-white;
+}
+
+.button-add-new-post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-post {
+  display: flex;
+  justify-content: left;
+}
+
+// banner
+
+.banner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-size: $banner-title;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: $color-white;
+
+    &--subtitle {
+      font-size: 24px;
+      color: #ffffff;
+    }
+  }
+
+  &__title--bold {
+    font-size: $banner-title;
+    color: $color-brand;
+    font-weight: 900 !important;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  &__title--bold-sec {
+    font-size: $banner-title;
+    color: $color-secoundary;
+    font-weight: 900 !important;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: $regular-text;
+    margin: 20px 0;
+  }
+
+  &__btn {
+    margin: 20px 0 70px 0;
+  }
+}
+
+// form
+.form-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: regular-text;
+  padding: 20px 0;
+}
+
+.form-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 700px;
+  top: -180px;
+  height: 500px;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__item {
+    padding: 0px 3px;
+    margin: 20px 0;
+  }
+
+  &__item input {
+    border: 2px solid $color-input-border;
+    padding: 14px 0px;
+    width: 100%;
+    border-radius: 3px;
+    width: 300px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+::placeholder {
+  font-size: $regular-text;
+  color: $color-black;
 }
