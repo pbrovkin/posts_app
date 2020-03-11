@@ -12,7 +12,7 @@ const AddPostForm = (props) => {
             category,
             content,
         })
-        props.history.push('/');
+        props.history.push('/')
     }
 
     return (

@@ -4,11 +4,17 @@ import { Link } from 'react-router-dom'
 const PostList = ({ posts, setPosts, setNotification }) => {
     const handleDeletePost = (id) => {
         const deletedPost = posts.find(post => post.id === id)
-        const newPosts = posts.filter(post => {
-            return post.id !== deletedPost.id
-        })
-        setNotification(`'${deletedPost.title}' deleted!`)
-        setPosts(newPosts)
+        if (window.confirm(`Delete '${deletedPost.title}' ?`)) {
+            const newPosts = posts.filter(post => {
+                return post.id !== deletedPost.id
+            })
+            setNotification(`'${deletedPost.title}' deleted!`)
+            setPosts(newPosts)
+            setTimeout(() => {
+                setNotification('')
+            }, 10000)
+        }
+
     }
     return (
 
