@@ -5,7 +5,7 @@ import "./banner.scss";
 const Menu = () => {
   const padding = { padding: 10 };
   return (
-    <div>
+    <div className = "container">
       <Link style={padding} to="/">
         <div className="button">Posts</div>
       </Link>

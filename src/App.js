@@ -47,13 +47,23 @@ const App = () => {
 
   return (
     <>
-      <Header />
       <Router>
         <div>
+          <Header />
           <Menu />
           <Notification message={notification} />
           <Switch>
-            <Route path="/" exact render={() => <PostList posts={posts} />} />
+            <Route
+              path="/"
+              exact
+              render={() => (
+                <PostList
+                  posts={posts}
+                  setPosts={setPosts}
+                  setNotification={setNotification}
+                />
+              )}
+            />
             <Route
               exact
               path="/posts/:id"
