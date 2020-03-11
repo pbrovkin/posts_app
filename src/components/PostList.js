@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const PostList = ({ posts, setPosts }) => {
+const PostList = ({ posts, setPosts, setNotification }) => {
     const handleDeletePost = (id) => {
         const deletedPost = posts.find(post => post.id === id)
         const newPosts = posts.filter(post => {
             return post.id !== deletedPost.id
         })
+        setNotification(`'${deletedPost.title}' deleted!`)
         setPosts(newPosts)
     }
     return (

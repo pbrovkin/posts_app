@@ -40,7 +40,6 @@ const App = () => {
         }, 10000)
     }
 
-
     const postById = (id) => posts.find(post => post.id === id)
 
     return (
@@ -50,7 +49,7 @@ const App = () => {
                     <Menu />
                     <Notification message={notification} />
                     <Switch>
-                        <Route path="/" exact render={() => <PostList posts={posts} setPosts={setPosts} />} />
+                        <Route path="/" exact render={() => <PostList posts={posts} setPosts={setPosts} setNotification={setNotification}/>} />
                         <Route exact path="/posts/:id" render={({ match }) => <Post post={postById(match.params.id)} />} />
                         <Route path="/addPost" render={(props) => <AddPostForm history={props.history} addPost={addPost} />} />
                     </Switch>
