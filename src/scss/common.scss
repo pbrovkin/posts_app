@@ -1,0 +1,46 @@
+@import "./variable.scss";
+
+// scss by section
+.header-section {
+  background: $color-white;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.header-section {
+  background: $color-white;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-section,
+.role-section,
+.uidesign-section {
+  padding: 120px 0;
+}
+
+.contact-section,
+.banner-section {
+  background: $color-brand;
+  padding: 30px 0;
+}
+
+.thank-you-section {
+  background: $color-brand-light;
+  padding: 120px 0;
+}
+
+.process-section {
+  background: $color-light-grey;
+}
+
+.footer-section {
+  background: $color-black;
+}
+
+.container {
+  max-width: rem(1350px);
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+}
+.post-card {
+  background-color: red;
+}
