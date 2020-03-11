@@ -15,6 +15,10 @@ const AddPostForm = (props) => {
         props.history.push('/')
     }
 
+    const handleCancel = () => {
+        props.history.push('/')
+    }
+
     return (
         <div className="container">
             <h3>add a post</h3>
@@ -33,9 +37,9 @@ const AddPostForm = (props) => {
                 </div>
                 <button>add</button>
             </form>
+            <button onClick={handleCancel}>cancel</button>
         </div>
     )
-
 }
 
 export default AddPostForm

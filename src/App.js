@@ -5,7 +5,7 @@ import Post from './components/Post'
 import AddPostForm from './components/AddPostForm'
 import Menu from './components/Menu'
 import Notification from './components/Notification'
-import Header from "./components/Header"
+import Header from './components/Header'
 
 
 const App = () => {
@@ -33,7 +33,7 @@ const App = () => {
     const [notification, setNotification] = useState('')
 
     const addPost = (post) => {
-        post.id = (Math.random() * 100000).toFixed(0)
+        post.id = (Math.random() * 1000000).toFixed(0)
         setPosts(posts.concat(post))
         setNotification(`'${post.title}' added!`)
         setTimeout(() => {

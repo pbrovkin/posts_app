@@ -1,7 +1,7 @@
-import React from "react";
-import "./header.scss";
-import "../scss/common.scss";
-import Banner from "./Banner";
+import React from "react"
+import "./header.scss"
+import "../scss/common.scss"
+import Banner from "./Banner"
 
 const Header = () => {
   return (
@@ -12,4 +12,4 @@ const Header = () => {
     </header>
   );
 };
-export default Header;
+export default Header

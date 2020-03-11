@@ -12,7 +12,7 @@ const PostList = ({ posts, setPosts, setNotification }) => {
             setPosts(newPosts)
             setTimeout(() => {
                 setNotification('')
-            }, 10000)
+            }, 5000)
         }
 
     }

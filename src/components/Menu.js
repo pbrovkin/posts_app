@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './banner.scss'
 
 const Menu = () => {
   const padding = { padding: 10 }

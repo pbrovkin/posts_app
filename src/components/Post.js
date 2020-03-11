@@ -13,15 +13,21 @@ const Post = ({ post, setPosts, setNotification, posts, history }) => {
             history.push('/')
             setTimeout(() => {
                 setNotification('')
-            }, 10000)
+            }, 5000)
         }
     }
+
+    const handleCancel = () => {
+        history.push('/')
+    }
+
     return (
         <div className="container">
             <h3>Title: {post.title}</h3>
             <h4>Category: {post.category}</h4>
             <p>{post.content}</p>
             <button onClick={() => { handleDeletePost(post.id) }}>delete</button>
+            <button onClick={handleCancel}>back to posts</button>
         </div>
     )
 }
