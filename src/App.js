@@ -29,7 +29,7 @@ const App = () => {
             id: '3',
         },
         {
-            title: 'Running in the forest',
+            title: 'Another one title',
             category: 'Entertainment',
             content: 'Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content',
             id: '4',

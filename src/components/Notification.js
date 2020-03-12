@@ -2,7 +2,7 @@ import React from 'react'
 
 const Notification = ({ message }) => {
     const notifStyle = {
-        color: ''
+        color: '',
     }
     if (message.includes('added')) {
         notifStyle.color = 'green'
