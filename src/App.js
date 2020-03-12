@@ -12,21 +12,27 @@ const App = () => {
     const [posts, setPosts] = useState([
         {
             title: 'My day in integrify',
-            category: 'work',
+            category: 'Work',
             content: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.',
             id: '1',
         },
         {
             title: 'My talk at React Meetup',
-            category: 'speech',
+            category: 'Speech',
             content: 'Something content here. Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content',
             id: '2',
         },
         {
             title: 'Running in the forest',
-            category: 'sport',
+            category: 'Sport',
             content: 'Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content',
             id: '3',
+        },
+        {
+            title: 'Running in the forest',
+            category: 'Entertainment',
+            content: 'Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content',
+            id: '4',
         }
     ])
 
@@ -48,7 +54,7 @@ const App = () => {
     return (
         <>
             <Router>
-                <div>
+                <div className='container_wrapper'>
                     <Header />
                     <Menu />
                     <Notification message={notification} />
