@@ -25,9 +25,9 @@ const Post = ({ post, setPosts, setNotification, posts, history }) => {
     <div className="container">
       <div className="singlepost">
         <div className="singlepost-content">
-          <h1>Title: {post.title}</h1>
-          <h2>Category: {post.category}</h2>
-          <p>{post.content}</p>
+          <h1 className="post-title">Title: {post.title}</h1>
+          <h2 className="post-catagoris">Category: {post.category}</h2>
+          <p className="post-regulatext">{post.content}</p>
         </div>
 
         <div className="button-post">
@@ -37,10 +37,10 @@ const Post = ({ post, setPosts, setNotification, posts, history }) => {
               handleDeletePost(post.id);
             }}
           >
-            delete
+            Delete
           </button>
           <button className="button" onClick={handleCancel}>
-            back to posts
+            Back to posts
           </button>
         </div>
       </div>

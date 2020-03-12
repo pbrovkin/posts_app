@@ -17,16 +17,16 @@ const PostList = ({ posts, setPosts, setNotification }) => {
   };
   return (
     <div className="container">
-      <h1>{"Recent posts"}</h1>
+      <h1 className="bannertitle">{"Recent posts"}</h1>
       <br /> <br />
       <ul className="posts_container">
         {posts.map(post => (
           <li key={post.id} className="post">
             <div className="post-content">
-              <h4 className="banner__title--subtitle">
+              <h4 className="post-title">
                 <Link to={`/posts/${post.id}`}>{post.title}</Link>
               </h4>
-              <p className="catagories">Catagories: {post.category}</p>
+              <p className="post-catagoris">Catagories: {post.category}</p>
             </div>
 
             <button

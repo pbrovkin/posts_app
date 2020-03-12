@@ -242,6 +242,7 @@ p {
   align-items: center;
 }
 .button-post {
+  padding: 0 30px;
   display: flex;
   justify-content: left;
 }
@@ -311,9 +312,10 @@ p {
   flex-direction: column;
   width: 700px;
   top: -180px;
-  height: 500px;
+ /* height: 500px;*/
   box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  padding: 50px 0;
 }
 
 .form {
@@ -332,7 +334,17 @@ p {
     padding: 14px 0px;
     width: 100%;
     border-radius: 3px;
-    width: 300px;
+    width: 440px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  &__item textarea {
+    border: 2px solid $color-input-border;
+    padding: 14px 0px;
+    width: 100%;
+    border-radius: 3px;
+    width: 440px;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -342,4 +354,32 @@ p {
 ::placeholder {
   font-size: $regular-text;
   color: $color-black;
+}
+.bannertitle{
+  margin: 0 30px;
+}
+.notification{
+  margin: 0 30px;
+ 
+ text-align: center;
+  padding: 30px;
+  border: none;
+  font-size: 24px;
+}
+
+.post-title{
+
+    padding: 15px 0;
+    font-size: $section-title;
+ 
+}
+.post-catagoris{
+
+  padding: 15px 0;
+  font-size: 28px;
+
+}
+.post-regulatext, .catagories{
+  padding: 15px 0;
+  font-size: $regular-text;
 }
